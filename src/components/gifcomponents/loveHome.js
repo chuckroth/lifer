@@ -41,7 +41,7 @@ import emtwinkle from "../../frame79/f142bc6d765133592083b7832bb9a407.gif"
 import blueSparkle from "../../frame79/dbf8d1648e0c8d600600cceef6f40648.gif"
 import pinkStar from "../../frame79/d5d9620a7cd039bba4f0121a0fb6f43c.gif"
 import dice from "../../frame79/0230a672b7d76cd83b3acb2193336b5c.gif"
-import { Div, Row, Col} from "atomize";
+import { Div} from "atomize";
 
 const LoveHome= () =>{
 
