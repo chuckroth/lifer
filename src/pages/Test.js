@@ -3,7 +3,7 @@ import background from "../TileBG_Cloud.png";
 import quilt from "../frame79/39464fd22363761816c56cb4948b10c3.png"
 import Welcome from "../components/gifcomponents/Welcome"
 import LoveHome from "../components/gifcomponents/loveHome"
-import { Div, Container, Row, Col,} from "atomize";
+import { Div, Container} from "atomize";
 
 const Test = () =>{
 
