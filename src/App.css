@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.About-page{
+  background-image: url("TileBG_Cloud.png");
+  position: absolute;
+  width: 1990px;
+  height: 1119px;
+  left: 0px;
+  top: -139px;
+}
+.About-intro{
+  position: absolute;
+  height: 90px;
+  left: 34.79%;
+  right: 34.79%;
+  top: 262px;
+
+  font-family: 'Palatino';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footerOut {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 27.3%;
+  left: 0px;
+  bottom: 0px;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  position: fixed;
+
+}
+
+.scarecrowb{
+  position: absolute;
+  width: 114px;
+  height: 83px;
+  left: 462px;
+  top: 149px;
+  background: url("./footerstuff/f060531c99fcf06d7e43a9fb357efe59.gif") no-repeat;
+  background-size: contain;
+}
+
+.gnomelook{
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  left: 1036px;
+  bottom: 26px;
+  background: url("./footerstuff/58793c88284de4ed9df794de26d5b985.gif") no-repeat;
+  background-size: contain;
+}
+
+.hallhouse{
+  position: absolute;
+  width: 209px;
+  height: 156px;
+  left: 146px;
+  bottom: 55px;
+  background-position: center;
+  
+  background: url("./footerstuff/afc055ca2f5e436ad11483d4338b807c.gif") no-repeat;
+  background-size: contain;
+}
+
+.barnline{
+  position: absolute;
+  width: 525px;
+  height: 44px;
+  left: 744px;
+  bottom: 73px;
+  background: url("./footerstuff/BARNLINE.png");
+}
+
+.bird1{
+  position: absolute;
+  width: 418px;
+  height: 83px;
+  left: 41px;
+  bottom: 174px;
+  background: url("./footerstuff/99349c8c99c4009c8d0c6affe6ff6e18.gif") no-repeat;
+  background-size: contain;
+}
+
+.kansasfield{
+  position: absolute;
+  width: 2800px;
+  height: 99px;
+  left: 0px;
+  bottom: 0px;
+
+  background: url("./footerstuff/kansas_fieldpng\ 1.png");
+}
+
+.tornado{
+  position: absolute;
+width: 83px;
+height: 63px;
+flex-shrink: 0;
+left: 1156px;
+bottom: 99px;
+
+background: url("./footerstuff/7d85e05ce68a46fa1f25ef8db62386ca.gif") no-repeat;
+background-size: contain;
+}
+
+.pinclipart{
+  position: absolute;
+width: 230px;
+height: 230px;
+right: 0px;
+bottom: 43px;
+
+background: url("./footerstuff/PinClipart\ 1.png")
+}
+
+.navtag{
+  text-decoration: none;
+  font-family: 'Univers LT Std';
+font-style: normal;
+font-weight: 300;
+font-size: 13px;
+line-height: 16px;
+}
+a, u {
+  text-decoration: none;
+}
