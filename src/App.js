@@ -26,14 +26,14 @@ function App() {
   return (
     <ShopProvider>
     <StyletronProvider value={engine} debug={debug} debugAfterHydration>
-      <Router>
+      <Router >
       <Navbar />
       <Cart />
         <Routes>
           <Route path="gid://shopify/Product/:id" element={<Product />}></Route>
           <Route path="/" element={<Home />}></Route>
-          <Route path="shop" element={<Shop />}></Route>
-          <Route path="about" element={<About />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/about" element={<About />}></Route>
           <Route path="/gkys" element={<GoKillYourself />} />
           <Route path="/test" element={<Test />} />
           <Route path='/Tshirt' element={<Tshirt />} />
