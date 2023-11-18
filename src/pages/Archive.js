@@ -23,8 +23,8 @@ const Archive = () =>{
         return <p>loading</p>;
       }
     return(
-        <Container>
-            <Row>
+        <Container p={{ t: "4rem" }}>
+            <Row  m={{ t: "4rem" }}>
             {collections.map(collection=>(
                 <Col size={{xs:12, md: 6, lg: 4}}>
                     <Link to={`/${collection.id}`} >
