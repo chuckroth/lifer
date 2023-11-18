@@ -8,12 +8,13 @@ import GoKillYourself from "./pages/GoKillYourself"
 import Test from "./pages/Test"
 import Product from "./pages/product";
 import Tshirt from "./pages/Tshirt";
+import Archive from "./pages/Archive";
 import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Cart from "./components/cart";
 import ShopProvider from './context/shopContext'
-
+import './App.css'; // Import your global styles here
 
 
 const debug =
@@ -26,6 +27,7 @@ function App() {
   return (
     <ShopProvider>
     <StyletronProvider value={engine} debug={debug} debugAfterHydration>
+    <div className="app-container">
       <Router >
       <Navbar />
       <Cart />
@@ -37,9 +39,11 @@ function App() {
           <Route path="/gkys" element={<GoKillYourself />} />
           <Route path="/test" element={<Test />} />
           <Route path='/Tshirt' element={<Tshirt />} />
+          <Route path='/Archive' element={<Archive />} />
         </Routes>
        <Footer />
       </Router>
+      </div>
     </StyletronProvider>
     </ShopProvider>
   );

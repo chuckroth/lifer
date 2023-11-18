@@ -87,6 +87,25 @@ class ShopProvider extends Component{
           }
     }
 
+    fetchArchiveCollection = async () =>{
+        try {
+            const collections = await client.collection.fetchAll();
+            const product = await client.collection.fetchWithProducts(collections[2].id);
+            console.log("these re products")
+            console.log(product.products)
+            console.log(collections)
+            console.log("Fetched products: ", product.products);
+            if (!Array.isArray(product.products)) {
+                throw new Error("Products are not an array");
+              }
+              this.setState({ collections: Array.isArray(product.products) ? product.products : [] });
+          } catch (error) {
+            // Handle the error, you can log it for debugging purposes
+            console.error("Error fetching collections", error);
+            this.setState({ collections: [] })
+          }
+    }
+
  
 
     closeCart = () =>{ this.setState({ isCartOpen: false })}
@@ -101,6 +120,7 @@ class ShopProvider extends Component{
                 fetchAllProducts: this.fetchAllProducts,
                 fetchCollection: this.fetchCollection,
                 fetchTShirtCollection: this.fetchTShirtCollection,
+                fetchArchiveCollection: this.fetchArchiveCollection,
                 fetchProductWithId: this.fetchProductWithId,
                 closeCart: this.closeCart,
                 openCart: this.openCart,

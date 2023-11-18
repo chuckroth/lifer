@@ -26,10 +26,8 @@ const Home = () =>{
                 <Col>
                 <Div bgImg={angel} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="71px" w="171px"pos="absolute" top="155px" left="38px" onClick={() => handleImageClick("/gkys")}></Div>
                     <Div bgImg={door} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="122.48px" w="59.61px" pos="absolute" top="74.95px" left="93px"onClick={() => handleImageClick("/gkys")}></Div>
-                    <Div bgImg={window} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="40px" w="40px" pos="absolute" top="86px" left="166px"onClick={() => handleImageClick("/gkys")}></Div>
-                    
+                    <Div bgImg={window} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="40px" w="40px" pos="absolute" top="86px" left="166px"onClick={() => handleImageClick("/gkys")}></Div>                    
                     <Div bgImg={slippers} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="22px" w="22px" pos="absolute" top="169px" left="70px" onClick={() => handleImageClick("/gkys")}></Div>
-                    <Text w="94px" h= "14px" pos="absolute" top= "56px" left= "76px" onClick={() => handleImageClick("/gkys")}>Enter Lifer</Text>
                 </Col>
             </Row>
             <Div bgImg={quilt} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" pos="absolute" h="150.63px" w="220.07px" top="94.88px" left="327px" />
