@@ -8,7 +8,7 @@ import slippers from "../homecontent/SLIPPERS.png"
 import quilt from "../frame79/39464fd22363761816c56cb4948b10c3.png"
 import Welcome from "../components/gifcomponents/Welcome"
 import LoveHome from "../components/gifcomponents/loveHome"
-import { Div, Container, Row, Col, Text} from "atomize";
+import { Div, Container, Row, Col} from "atomize";
 
 const Home = () =>{
 
