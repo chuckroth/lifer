@@ -25,9 +25,6 @@ const Navbar = () =>{
                 minW="100%" >
             <Link to="/"><img src={lifer} alt="lifer" height="100%" />
             </Link>
-            <Link to="/about" className="navtag">
-            About
-            </Link>
             <Link to="/gkys" className="navtag">
             Home Page
             </Link>
