@@ -20,7 +20,7 @@ const Home = () =>{
   
 
     return(
-        <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'repeat', height: '1400px'}}>
+        <div style={{backgroundImage: `url(${background})`, backgroundRepeat: 'repeat', height:'1400px'}}>
             <Container>
             <Row>
                 <Col>
@@ -30,6 +30,8 @@ const Home = () =>{
                     <Div bgImg={slippers} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="22px" w="22px" pos="absolute" top="169px" left="70px" onClick={() => handleImageClick("/gkys")}></Div>
                 </Col>
             </Row>
+            </Container>
+            <Container >
             <Div bgImg={quilt} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" pos="absolute" h="150.63px" w="220.07px" top="94.88px" left="327px" />
                     <Welcome />
                     <LoveHome />
