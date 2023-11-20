@@ -26,7 +26,7 @@ const Navbar = () =>{
             <Link to="/"><img src={lifer} alt="lifer" height="100%" />
             </Link>
             <Link to="/gkys" className="navtag">
-            Home Page
+            New!
             </Link>
             <Link to="/Tshirt" className="navtag">
             T Shirts

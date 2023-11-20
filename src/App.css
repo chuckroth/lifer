@@ -185,5 +185,6 @@ a, u {
   box-sizing: border-box;
 }
 body{
-  width: 100vw!important;
+  width: 300vw!important;
+
 }
