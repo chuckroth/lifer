@@ -23,12 +23,12 @@ const Tshirt = () =>{
         return <p>loading</p>;
       }
     return(
-        <Container>
+        <Container >
             <Row>
             {collections.map(collection=>(
                 <Col size={{xs:12, md: 6, lg: 4}}>
                     <Link to={`/${collection.id}`} >
-                    <Div p="2rem"  >
+                    <Div p="2rem"  m="2rem">
                     {collection.images && collection.images[0] && (
                                 <Div
                                     h ="22rem"

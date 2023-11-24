@@ -27,7 +27,7 @@ function App() {
   return (
     <ShopProvider>
     <StyletronProvider value={engine} debug={debug} debugAfterHydration>
-    <div >
+    <div>
       <Router >
       <Navbar />
       <Cart />

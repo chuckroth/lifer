@@ -20,7 +20,7 @@ const Home = () =>{
   
 
     return(
-        <div style={{backgroundImage: `url(${background})`, backgroundRepeat: 'repeat', height:'1400px'}}>
+        <div style={{backgroundImage: `url(${background})`,  backgroundSize: 'cover', backgroundRepeat: 'repeat', height:'1400px'}}>
             <Container>
             <Row>
                 <Col>
