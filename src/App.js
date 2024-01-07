@@ -26,25 +26,51 @@ const debug =
 function App() {
   return (
     <ShopProvider>
-    <StyletronProvider value={engine} debug={debug} debugAfterHydration>
-    <div>
-      <Router >
-      <Navbar />
-      <Cart />
-        <Routes>
-          <Route path="gid://shopify/Product/:id" element={<Product />}></Route>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/shop" element={<Shop />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/gkys" element={<GoKillYourself />} />
-          <Route path="/test" element={<Test />} />
-          <Route path='/Tshirt' element={<Tshirt />} />
-          <Route path='/Archive' element={<Archive />} />
-        </Routes>
-       <Footer />
-      </Router>
-      </div>
-    </StyletronProvider>
+      <StyletronProvider value={engine} debug={debug} debugAfterHydration>
+        <div>
+          <Router>
+            <Routes>
+              {/* Define routes without Navbar and Cart */}
+              <Route
+                path="/"
+                element={
+                  <div>
+                    <Home />
+                    <Footer />
+                  </div>
+                }
+              ></Route>
+              {/* Add more routes without Navbar and Cart as needed */}
+              {/* Define routes with Navbar and Cart */}
+              <Route
+                path="/*"
+                element={
+                  <div>
+                    <Navbar />
+                    <Cart />
+                    <Routes>
+                      <Route
+                        path="gid://shopify/Product/:id"
+                        element={<Product />}
+                      ></Route>
+                      <Route path="/shop" element={<Shop />}></Route>
+                      <Route path="/about" element={<About />}></Route>
+                      <Route
+                        path="/gkys"
+                        element={<GoKillYourself />}
+                      />
+                      <Route path="/test" element={<Test />} />
+                      <Route path="/Tshirt" element={<Tshirt />} />
+                      <Route path="/Archive" element={<Archive />} />
+                    </Routes>
+                    <Footer />
+                  </div>
+                }
+              ></Route>
+            </Routes>
+          </Router>
+        </div>
+      </StyletronProvider>
     </ShopProvider>
   );
 }

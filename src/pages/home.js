@@ -1,14 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import background from "../TileBG_Cloud.png";
 import angel from "../homecontent/AngelHugs.png"
 import door from "../homecontent/brnweldoor.png"
 import window from "../homecontent/cloudwindow.png"
 import slippers from "../homecontent/SLIPPERS.png"
-import quilt from "../frame79/39464fd22363761816c56cb4948b10c3.png"
+//import quilt from "../frame79/quilt_fr.png"
 import Welcome from "../components/gifcomponents/Welcome"
 import LoveHome from "../components/gifcomponents/loveHome"
 import { Div, Container, Row, Col} from "atomize";
+import ChristmasTree from "../components/gifcomponents/ChristmasTree";
+import OldLadyCar from "../components/gifcomponents/OldLadyCar"
 
 const Home = () =>{
 
@@ -20,8 +22,9 @@ const Home = () =>{
   
 
     return(
-        <div style={{backgroundImage: `url(${background})`,  backgroundSize: 'cover', backgroundRepeat: 'repeat', height:'1400px'}}>
+        <div style={{backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundRepeat: 'repeat', height:'1400px'}}>
             <Container>
+            <OldLadyCar />
             <Row>
                 <Col>
                 <Div bgImg={angel} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="71px" w="171px"pos="absolute" top="155px" left="38px" onClick={() => handleImageClick("/gkys")}></Div>
@@ -31,10 +34,52 @@ const Home = () =>{
                 </Col>
             </Row>
             </Container>
-            <Container >
-            <Div bgImg={quilt} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" pos="absolute" h="150.63px" w="220.07px" top="94.88px" left="327px" />
+            <Container 
+                d="flex"
+                flexDirection="column"
+                align="start"
+                justify="center"
+                border="0px solid"
+                borderColor="black"
+                h="100%"
+                w="33%"
+                >
                     <Welcome />
+                    <Link to="/gkys" className="navtag">
+            Here is the store
+            </Link>
+                <Container 
+                d="flex"
+                justify="center"
+                align="center"
+                border="0px solid"
+                borderColor="black"
+                pos="absolute"
+                top="45%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                h="10%"
+                w="10%"
+                >
+                
                     <LoveHome />
+                </Container>
+                <Container 
+                d="flex"
+                justify="center"
+                align="center"
+                border="0px solid"
+                borderColor="red"
+                pos="absolute"
+                top="65%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                h="10%"
+                w="10%"
+                >
+                
+                    <ChristmasTree />
+                </Container>
             </Container>
         </div>
     )

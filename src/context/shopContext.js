@@ -15,9 +15,11 @@ class ShopProvider extends Component{
         products: [],
         product: {},
         collections: {},
+        currentPage: 1,
         checkout: {},
         isCartOpen: false,
         test: 'test'
+
     }
 
     componentDidMount(){
@@ -79,7 +81,9 @@ class ShopProvider extends Component{
             if (!Array.isArray(product.products)) {
                 throw new Error("Products are not an array");
               }
-              this.setState({ collections: Array.isArray(product.products) ? product.products : [] });
+              this.setState({ 
+                collections: Array.isArray(product.products) ? product.products : [] 
+                });
           } catch (error) {
             // Handle the error, you can log it for debugging purposes
             console.error("Error fetching collections", error);
@@ -89,21 +93,30 @@ class ShopProvider extends Component{
 
     fetchArchiveCollection = async () =>{
         try {
-            const collections = await client.collection.fetchAll();
-            const product = await client.collection.fetchWithProducts(collections[2].id);
-            console.log("these re products")
-            console.log(product.products)
-            console.log(collections)
-            console.log("Fetched products: ", product.products);
-            if (!Array.isArray(product.products)) {
-                throw new Error("Products are not an array");
-              }
-              this.setState({ collections: Array.isArray(product.products) ? product.products : [] });
-          } catch (error) {
+            const collections = await client.collection.fetchAll()
+            //const perPage = 200
+            const product = await client.collection.fetchWithProducts(collections[2].id,{productsFirst: 200})
+            
+            /*
+                page: this.state.currentPage,
+                perPage,
+            */
+            
+            console.log("Fetched products: ", product.products)
+             this.setState((prevState)=>({
+                    collections: Array.isArray(prevState.collections) 
+                    ? [...prevState.collections, ...product.products]
+                    : [...product.products],
+                    currentPage: prevState.currentPage +1,
+                
+               }))
+        } catch (error) {
             // Handle the error, you can log it for debugging purposes
             console.error("Error fetching collections", error);
-            this.setState({ collections: [] })
-          }
+            this.setState({
+                    collections: []
+            })
+        }
     }
 
  

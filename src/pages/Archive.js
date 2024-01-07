@@ -1,23 +1,28 @@
-import React, { useContext, useEffect, }  from 'react'
+import React, { useContext, useEffect, useState}  from 'react'
 import { ShopContext } from '../context/shopContext'
-import { Text, Container, Row, Div, Col, ThemeProvider} from 'atomize'
+import { Text, Container, Row, Div, Col, ThemeProvider, Button} from 'atomize'
 import { Link } from 'react-router-dom'
 
 const Archive = () =>{
     const {fetchArchiveCollection, collections} = useContext(ShopContext)
-
+    const [currentPage, setCurrentPage] = useState(1)
     useEffect(()=>{
-        fetchArchiveCollection()
+        fetchArchiveCollection(currentPage)
         return () => {
 
         };
-    }, [fetchArchiveCollection])
+    }, [fetchArchiveCollection, currentPage])
 
     const theme= {
         fontFamily: {
           primary: "Palatino",
         }
       }
+
+      const handleLoadMore = () =>{
+        console.log("I've been clicked")
+        setCurrentPage((prevPage) => prevPage + 1)
+       }
 
       if (!Array.isArray(collections)) {
         return <p>loading</p>;
@@ -50,7 +55,15 @@ const Archive = () =>{
                 ))}
             </Row>
             <Row>
-                <Div h="10rem"></Div>
+            <Div h="2rem"></Div>
+            <Div d="flex" justify="center">
+            <Button onClick={handleLoadMore} m={{ t: '2rem' }}>
+                Load More
+            </Button>
+            </Div>
+            </Row>
+            <Row>
+                <Div h="18rem"></Div>
             </Row>
         </Container>
        
