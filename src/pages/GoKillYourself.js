@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState}  from 'react'
+import React, { useContext, useEffect}  from 'react'
 import { ShopContext } from '../context/shopContext'
-import { Text, Container, Row, Div, Col, ThemeProvider, Button} from 'atomize'
+import { Text, Container, Row, Div, Col, ThemeProvider} from 'atomize'
 import { Link } from 'react-router-dom'
 
 const GoKillYourself = () =>{
