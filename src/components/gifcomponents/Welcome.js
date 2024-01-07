@@ -17,7 +17,7 @@ const Welcome= () =>{
                 w="262.04px" 
                 h="90.82px" 
                 pos="relative"
-                left="20%" />
+                left="0%" />
            <Div bgImg={spider} 
             zIndex="2"
             bgSize="contain" 
@@ -27,7 +27,7 @@ const Welcome= () =>{
             h="60.3px" 
             pos="relative" 
             top="-1px" 
-            left="98%" />
+            left="78%" />
             <Div bgImg={quilt} 
                 zIndex="0"
                 bgSize="contain" 
@@ -37,7 +37,7 @@ const Welcome= () =>{
                 h="100%"
                 w="100%" 
                 top="-94.88px" 
-                left="30%"/> 
+                left="0%"/> 
                 
     </Div>
 

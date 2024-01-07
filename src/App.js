@@ -34,7 +34,7 @@ function App() {
               <Route
                 path="/"
                 element={
-                  <div>
+                  <div className="About-page">
                     <Home />
                     <Footer />
                   </div>

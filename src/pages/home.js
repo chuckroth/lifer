@@ -44,10 +44,7 @@ const Home = () =>{
                 h="100%"
                 w="33%"
                 >
-                    <Welcome />
-                    <Link to="/gkys" className="navtag">
-            Here is the store
-            </Link>
+                    <Welcome> <Link to="/gkys" className="navtag"></Link> </Welcome>
                 <Container 
                 d="flex"
                 justify="center"

@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom'
 
 const GoKillYourself = () =>{
     const {fetchCollection, collections} = useContext(ShopContext)
-    const [currentPage, setCurrentPage] = useState(1)
 
     useEffect(()=>{
-        fetchCollection(currentPage)
+        fetchCollection()
         return () => {
 
         };
-    }, [fetchCollection, currentPage])
+    }, [fetchCollection])
 
     const theme= {
         fontFamily: {
@@ -20,9 +19,7 @@ const GoKillYourself = () =>{
         }
       }
 
-      const handleLoadMore = () =>{
-        setCurrentPage((prevPage) => prevPage + 1)
-       }
+ 
 
       if (!Array.isArray(collections)) {
         return <p>loading</p>;
@@ -57,11 +54,7 @@ const GoKillYourself = () =>{
             </Row>
             <Row>
             <Div h="2rem"></Div>
-            <Div d="flex" justify="center">
-            <Button onClick={handleLoadMore} m={{ t: '2rem' }}>
-                Load More
-            </Button>
-            </Div>
+            
             </Row>
             <Row>
                 <Div h="18rem"></Div>
