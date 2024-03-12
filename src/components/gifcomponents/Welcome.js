@@ -14,7 +14,7 @@ const Welcome= () =>{
                 bgSize="contain" 
                 bgRepeat="no-repeat" 
                 bgPos="center center" 
-                w="262.04px" 
+                w="230.04px" 
                 h="90.82px" 
                 pos="relative"
                 left="0%" />
@@ -26,8 +26,8 @@ const Welcome= () =>{
             w="69.98px" 
             h="60.3px" 
             pos="relative" 
-            top="-1px" 
-            left="78%" />
+            top="-13px" 
+            left="81%" />
             <Div bgImg={quilt} 
                 zIndex="0"
                 bgSize="contain" 
@@ -36,8 +36,8 @@ const Welcome= () =>{
                 pos="relative" 
                 h="100%"
                 w="100%" 
-                top="-94.88px" 
-                left="0%"/> 
+                top="-54.88px" 
+                left="5%"/> 
                 
     </Div>
 

@@ -1,17 +1,57 @@
 import "../App.css"
 import React from "react";
+import SuicideWatch from "./suicidewatch";
+import Welcome from "../components/gifcomponents/Welcome";
+import LoveHome from "../components/gifcomponents/loveHome";
+import ChristmasTree from "../components/gifcomponents/ChristmasTree";
+import OldLadyCar from "../components/gifcomponents/OldLadyCar"
+import { useState, useEffect } from "react";
+import { Container } from "atomize";
+
 
 
 const About = () =>{
+
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth >= 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+    
+
     return(
         <div className="About-page">
-            i will kill ymself
             <div className="About-intro">
-            <p>Lifer is the practice of harnessing an eternal pack-rat spirit. Guided by an affinity for the chaotic clutter and granny patchwork aesthetics of my hometown in Kansas — each piece is alchemically assembled from unearthed and recycled materials, home sewn with love and intended to be kept for life.</p>
+            <p>"Born in Kansas. All items handmade in Los Angeles, CA. No refunds or exchanges accepted at this time. Please see the customs product page for all info about customs:)"
+</p>
             </div>
+        {isWideScreen && <Welcome/>  && !isWideScreen}
+        {!isWideScreen && isWideScreen && 
+        <Container
+                d="flex"
+                flexDirection="column"
+                align="start"
+                justify="center"
+                border="0px solid"
+                borderColor="black"
+                h="100%"
+                w="33%">
+           
+            <ChristmasTree/> 
+        </Container>
+        }
 
         </div>
     )
+
 }
 
 export default About;

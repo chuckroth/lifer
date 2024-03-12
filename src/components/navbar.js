@@ -28,8 +28,14 @@ const Navbar = () =>{
             <Link to="/gkys" className="navtag">
             New!
             </Link>
+            <Link to="/about" className="navtag">
+            about
+            </Link>
             <Link to="/Tshirt" className="navtag">
             T Shirts
+            </Link>
+            <Link to="/SuicideWatch" className="navtag">
+            mobile scale
             </Link>
             <Link to="/Archive" className="navtag">
             Archive

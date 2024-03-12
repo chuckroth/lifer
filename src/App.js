@@ -9,6 +9,7 @@ import Test from "./pages/Test"
 import Product from "./pages/product";
 import Tshirt from "./pages/Tshirt";
 import Archive from "./pages/Archive";
+import SuicideWatch from "./pages/suicidewatch";
 import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
@@ -64,6 +65,7 @@ function App() {
                       <Route path="/test" element={<Test />} />
                       <Route path="/Tshirt" element={<Tshirt />} />
                       <Route path="/Archive" element={<Archive />} />
+                      <Route path="/SuicideWatch" element={<SuicideWatch />}/>
                     </Routes>
                     <Footer />
                   </div>
