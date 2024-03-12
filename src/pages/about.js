@@ -1,10 +1,7 @@
 import "../App.css"
 import React from "react";
-import SuicideWatch from "./suicidewatch";
 import Welcome from "../components/gifcomponents/Welcome";
-import LoveHome from "../components/gifcomponents/loveHome";
 import ChristmasTree from "../components/gifcomponents/ChristmasTree";
-import OldLadyCar from "../components/gifcomponents/OldLadyCar"
 import { useState, useEffect } from "react";
 import { Container } from "atomize";
 

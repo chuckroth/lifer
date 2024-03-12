@@ -41,6 +41,7 @@ const GoKillYourself = () =>{
                                 />
                     )}
                                 <ThemeProvider theme={theme}>
+                                <Text fontFamily="primary" textColor="black" hoverTextColor="red" textAlign={{xs: "center", lg: "left"}}>{collection.availableForSale} </Text>
                                 <Text fontFamily="primary" textColor="black" hoverTextColor="red" textAlign={{xs: "center", lg: "left"}}>{collection.title} </Text>
                                 {collection.variants && collection.variants[0] &&(
                                 <Text fontFamily="primary" textColor="black" hoverTextColor="red" textAlign={{xs: "center", lg: "left"}}>${collection.variants[0].price.amount}</Text>

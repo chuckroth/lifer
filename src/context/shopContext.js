@@ -55,10 +55,11 @@ class ShopProvider extends Component{
         try {
             const collections = await client.collection.fetchAll();
             const product = await client.collection.fetchWithProducts(collections[0].id);
-            console.log("these re products")
-            console.log(product.products)
+            //console.log("these re products")
+           // console.log(product.products)
+            console.log("this is the collection")
             console.log(collections)
-            console.log("Fetched products: ", product.products);
+           // console.log("Fetched products: ", product.products);
             if (!Array.isArray(product.products)) {
                 throw new Error("Products are not an array");
               }
@@ -74,7 +75,7 @@ class ShopProvider extends Component{
         try {
             const collections = await client.collection.fetchAll();
             const product = await client.collection.fetchWithProducts(collections[1].id);
-            console.log("these re products")
+            console.log("i am deeply saddened")
             console.log(product.products)
             console.log(collections)
             console.log("Fetched products: ", product.products);
