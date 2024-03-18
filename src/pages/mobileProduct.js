@@ -45,20 +45,20 @@ const Product = () =>{
     if(!product.title) return( <p>im empty</p>)
     return(
         <ThemeProvider theme={theme}>
-        <Container pos="fixed" right="0px" w="20%" top= "10%" >
+        <Container pos="fixed" right="0px" w="30%" top= "10%">
         <Div bgImg={bfly} bgRepeat="no-repeat" bgSize="contain" bgPos="right center" h="3rem"></Div>
 
         </Container>
-       { isWideScreen && <Container  pos="fixed"
+        <Container  pos="fixed"
                     top="5%"
                     p="0"
                     d="0"
                     >
             <Row m={{ b: "2rem" }} p="0rem">
-
-                <Col size={{xs:12, md: 6, lg: 4}} >
+                <Col size="4">
                     <br></br>
                     <Text fontFamily="pointy" textSize="title" >{product.title}</Text>
+                    <Text fontFamily="pointy" textSize="title">{!isWideScreen && "true"}</Text>
                     <Text fontFamily="pointy" textColor="black" >${product.variants[0].price.amount}</Text>
                     <Text fontFamily="pointy" textColor="black"  left="0px">{product.description}</Text>
 
@@ -69,13 +69,13 @@ const Product = () =>{
                     
                 </Col>
             </Row>
-        </Container>}
-        <Container left="0" w={isWideScreen? "50%": "100%" }>
+        </Container>
+        <Container left="0" w="50%">
             <Row>
-            <Col align="center center" display="flex" >
+            <Col align="center center" display="flex">
                     {product.images.map(image=>(
-                                           <Div p={isWideScreen? "3rem": "0rem"} >
-                                             <Div bgImg={image.src} bgRepeat="no-repeat" bgSize="contain" bgPos="top center" h={isWideScreen? "100rem" : "50rem"} w={isWideScreen? "130%" : "100%"} p="3rem"></Div>
+                                           <Div p="3rem" >
+                                             <Div bgImg={image.src} bgRepeat="no-repeat" bgSize="contain" bgPos="center center" h= "50rem" w="130%" p="3rem"></Div>
                                            </Div>
                                            
 
@@ -83,6 +83,9 @@ const Product = () =>{
                 </Col>
             </Row>
         </Container >
+
+
+       
         </ThemeProvider>
     )
 }

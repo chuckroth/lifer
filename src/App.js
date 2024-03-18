@@ -15,6 +15,8 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Cart from "./components/cart";
 import ShopProvider from './context/shopContext'
+import { useState, useEffect } from "react";
+import MobileFooter from "./components/mobileFooter";
 import './App.css'; // Import your global styles here
 
 
@@ -25,6 +27,20 @@ const debug =
 
 
 function App() {
+
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth >= 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <ShopProvider>
       <StyletronProvider value={engine} debug={debug} debugAfterHydration>
@@ -67,7 +83,9 @@ function App() {
                       <Route path="/Archive" element={<Archive />} />
                       <Route path="/SuicideWatch" element={<SuicideWatch />}/>
                     </Routes>
-                    <Footer />
+                    {isWideScreen && <Footer />}
+                    {!isWideScreen && <MobileFooter />}
+                    
                   </div>
                 }
               ></Route>

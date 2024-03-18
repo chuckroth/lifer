@@ -75,10 +75,10 @@ class ShopProvider extends Component{
         try {
             const collections = await client.collection.fetchAll();
             const product = await client.collection.fetchWithProducts(collections[1].id);
-            console.log("i am deeply saddened")
-            console.log(product.products)
+            console.log("i am deeply saddened", product.products)
+            //console.log(product.products)
             console.log(collections)
-            console.log("Fetched products: ", product.products);
+            console.log("Fetched products: ", product.products[0].availableForSale);
             if (!Array.isArray(product.products)) {
                 throw new Error("Products are not an array");
               }

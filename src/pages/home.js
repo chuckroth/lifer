@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom"
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import background from "../TileBG_Cloud.png";
 import angel from "../homecontent/AngelHugs.png"
 import door from "../homecontent/brnweldoor.png"
@@ -9,7 +9,7 @@ import slippers from "../homecontent/SLIPPERS.png"
 //import quilt from "../frame79/quilt_fr.png"
 import Welcome from "../components/gifcomponents/Welcome"
 import LoveHome from "../components/gifcomponents/loveHome"
-import { Div, Container, Row, Col, Text} from "atomize";
+import { Div, Container, Row, Col} from "atomize";
 import ChristmasTree from "../components/gifcomponents/ChristmasTree";
 import OldLadyCar from "../components/gifcomponents/OldLadyCar"
 

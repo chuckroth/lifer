@@ -1,9 +1,11 @@
-import React, { useContext, useEffect, }  from 'react'
+import React, { useContext, useEffect, useState}  from 'react'
 import { ShopContext } from '../context/shopContext'
 import { Text, Container, Row, Div, Col, ThemeProvider} from 'atomize'
 import { Link } from 'react-router-dom'
 
 const Tshirt = () =>{
+
+ 
     const {fetchTShirtCollection, collections} = useContext(ShopContext)
 
     useEffect(()=>{
@@ -40,9 +42,11 @@ const Tshirt = () =>{
                     )}
                                 <ThemeProvider theme={theme}>
                                 <Text fontFamily="primary" textColor="black" hoverTextColor="red" textAlign={{xs: "center", lg: "left"}}>{collection.title} </Text>
+                                
                                 {collection.variants && collection.variants[0] &&(
                                 <Text fontFamily="primary" textColor="black" hoverTextColor="red" textAlign={{xs: "center", lg: "left"}}>${collection.variants[0].price.amount}</Text>
                                 )}
+                                <Text fontFamily="primary" textColor="black" hoverTextColor="red" textAlign={{xs: "center", lg: "left"}}>{!collection.availableForSale && "SOLD OUT"} </Text>
                                 </ThemeProvider>
                             </Div>
                     </Link>

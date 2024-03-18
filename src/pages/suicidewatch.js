@@ -3,12 +3,12 @@ import React from "react";
 import Welcome from "../components/gifcomponents/Welcome";
 import ChristmasTree from "../components/gifcomponents/ChristmasTree";
 import { useState, useEffect } from "react";
-import { Container, Text, Div } from "atomize";
+import { Container, Div } from "atomize";
 import door from "../homecontent/brnweldoor.png"
 import slippers from "../homecontent/SLIPPERS.png"
 import angel from "../homecontent/AngelHugs.png"
 import widow from "../homecontent/cloudwindow.png"
-import Home from "./home";
+import LoveHome from "../components/gifcomponents/loveHome";
 
 const SuicideWatch = () =>{
 
@@ -37,6 +37,7 @@ const SuicideWatch = () =>{
         <Div left="40%"top="60px" pos="absolute">Enter Lifer </Div>
         <Div bgImg={slippers} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="22px" w="22px" pos="absolute" top="169px" left="40%"></Div>
         <Container
+        /*
                 d="flex"
                 flexDirection="column"
                 align="start"
@@ -45,13 +46,31 @@ const SuicideWatch = () =>{
                 borderColor="black"
                 h="50%"
                 w="33%"
+        */
+                d="flex"
+                flexDirection="column"
+                align="center" // Centering content vertically
+                justify="center"
+                border="0px solid"
+                borderColor="black"
+                h="50vh" // Adjusted to 50vh for better centering
+                w="80%" // Adjusted width for better centering
+                m="auto" // Added margin auto for horizontal centering
                  >
-            <div style={{ marginTop: '220px' }}>
-            <ChristmasTree/> 
+                  
+            <div style={{ marginTop: '220px'}}>
+
+            <Welcome />
+            <LoveHome />
+            
+            <div className="mobileChristmas">
+            <ChristmasTree />
+            </div>
             </div>
         </Container>
         </Div>
         }
+        
         </div>
     )
 

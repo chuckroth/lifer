@@ -95,6 +95,16 @@
   background-size: contain;
 }
 
+.mobileScarecrowb{
+  position: absolute;
+  width: 114px;
+  height: 83px;
+  left: 300px;
+  top: 100px;
+  background: url("./footerstuff/f060531c99fcf06d7e43a9fb357efe59.gif") no-repeat;
+  background-size: contain;
+}
+
 .gnomelook{
   position: absolute;
   width: 73px;
@@ -122,6 +132,15 @@
   width: 525px;
   height: 44px;
   left: 744px;
+  bottom: 73px;
+  background: url("./footerstuff/BARNLINE.png");
+}
+
+.mobileBarnline{
+  position: absolute;
+  width: 525px;
+  height: 44px;
+  left: 50px;
   bottom: 73px;
   background: url("./footerstuff/BARNLINE.png");
 }
@@ -158,11 +177,32 @@ background: url("./footerstuff/7d85e05ce68a46fa1f25ef8db62386ca.gif") no-repeat;
 background-size: contain;
 }
 
+.mobileTornado{
+  position: absolute;
+  width: 83px;
+  height: 63px;
+  flex-shrink: 0;
+  left: 456px;
+  bottom: 85px;
+  
+  background: url("./footerstuff/7d85e05ce68a46fa1f25ef8db62386ca.gif") no-repeat;
+  background-size: contain;
+}
+
 .pinclipart{
   position: absolute;
 width: 230px;
 height: 230px;
 right: -20px;
+bottom: 43px;
+background: url("./footerstuff/PinClipart\ 1.png")
+}
+
+.mobilePinclipart{
+  position: absolute;
+width: 230px;
+height: 230px;
+left: 370px;
 bottom: 43px;
 background: url("./footerstuff/PinClipart\ 1.png")
 }
@@ -193,4 +233,8 @@ a, u {
 
 *{
   box-sizing: border-box;
+}
+
+.mobileChristmas {
+  padding-left: 100px;
 }
