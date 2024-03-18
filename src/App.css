@@ -100,7 +100,7 @@
   width: 114px;
   height: 83px;
   left: 300px;
-  top: 100px;
+  bottom: 10%;
   background: url("./footerstuff/f060531c99fcf06d7e43a9fb357efe59.gif") no-repeat;
   background-size: contain;
 }
