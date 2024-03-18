@@ -99,7 +99,7 @@
   position: absolute;
   width: 114px;
   height: 83px;
-  left: 300px;
+  right:30%;
   bottom: 10%;
   background: url("./footerstuff/f060531c99fcf06d7e43a9fb357efe59.gif") no-repeat;
   background-size: contain;
@@ -140,7 +140,7 @@
   position: absolute;
   width: 525px;
   height: 44px;
-  left: 50px;
+  left: 10%;
   bottom: 73px;
   background: url("./footerstuff/BARNLINE.png");
 }
@@ -171,7 +171,7 @@ width: 83px;
 height: 63px;
 flex-shrink: 0;
 left: 1156px;
-bottom: 99px;
+bottom: 20px;
 
 background: url("./footerstuff/7d85e05ce68a46fa1f25ef8db62386ca.gif") no-repeat;
 background-size: contain;
@@ -183,7 +183,7 @@ background-size: contain;
   height: 63px;
   flex-shrink: 0;
   left: 456px;
-  bottom: 85px;
+  bottom: 30%;
   
   background: url("./footerstuff/7d85e05ce68a46fa1f25ef8db62386ca.gif") no-repeat;
   background-size: contain;
@@ -203,7 +203,7 @@ background: url("./footerstuff/PinClipart\ 1.png")
 width: 230px;
 height: 230px;
 left: 370px;
-bottom: 43px;
+bottom: 15%;
 background: url("./footerstuff/PinClipart\ 1.png")
 }
 
