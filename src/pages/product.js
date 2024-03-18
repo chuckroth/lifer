@@ -72,6 +72,21 @@ const Product = () =>{
         </Container>}
         <Container left="0" w={isWideScreen? "50%": "100%" }>
             <Row>
+                <Text fontFamily="pointy" textSize="title" >{product.title}</Text>
+            </Row>
+            <Row>
+                <Text fontFamily="pointy" textColor="black" >${product.variants[0].price.amount}</Text>
+            </Row>
+            <Row>
+            <Text fontFamily="pointy" textColor="black"  left="0px">{product.description}</Text>
+            </Row>
+            <Row>
+            <Container display="flex-start" justify="left" pos="relative" >
+                    <Div bgImg={buttongif} bgSize="contain" bgRepeat="no-repeat" bgPos="left left" h="2.5rem"/>
+                    <Button onClick={()=> addItemToCheckout(product.variants[0].id, 1)} bg="geen" fontFamily="pointy" rounded="0" textColor="black" textSize="subheader">add to cart</Button>
+                    </Container>
+            </Row>
+            <Row>
             <Col align="center center" display="flex" >
                     {product.images.map(image=>(
                                            <Div p={isWideScreen? "3rem": "0rem"} >
