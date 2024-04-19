@@ -140,9 +140,9 @@
   position: absolute;
   width: 100%;
   height: 44px;
-  right: 5%;
+  right: -85%;
   bottom: 73px;
-  background: url("./footerstuff/BARNLINE.png") no-repeat;
+  background: url("./footerstuff/just_barn.png") no-repeat;
 }
 
 .bird1{

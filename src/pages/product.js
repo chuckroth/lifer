@@ -77,9 +77,8 @@ const Product = () =>{
             <Row>
                 <Text fontFamily="pointy" textColor="black" >${product.variants[0].price.amount}</Text>
             </Row>
-            <Row>
-            <Text fontFamily="pointy" textColor="black"  left="0px">{product.description}</Text>
-            </Row>
+            
+
             <Row>
             <Container display="flex-start" justify="left" pos="relative" >
                     <Div bgImg={buttongif} bgSize="contain" bgRepeat="no-repeat" bgPos="left left" h="2.5rem"/>
