@@ -54,7 +54,8 @@ function App() {
                   <div className="About-page"
 
                   >
-                    <Home />
+                    {isWideScreen && <Home />}
+                    {!isWideScreen && <SuicideWatch />}
                     <Footer />
                   </div>
                 }

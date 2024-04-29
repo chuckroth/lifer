@@ -1,18 +1,23 @@
 import "../App.css"
 import React from "react";
-import Welcome from "../components/gifcomponents/Welcome";
 import ChristmasTree from "../components/gifcomponents/ChristmasTree";
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
+import { useNavigate, Link} from "react-router-dom"
 import { Container, Div } from "atomize";
-import door from "../homecontent/brnweldoor.png"
-import slippers from "../homecontent/SLIPPERS.png"
-import angel from "../homecontent/AngelHugs.png"
-import widow from "../homecontent/cloudwindow.png"
 import LoveHome from "../components/gifcomponents/loveHome";
+import welcome from "../frame79/fdec9c2a63c7ac94fbb94d1f17559176.gif"
+import spider from "../frame79/87e7b68705aaa91293f3e613ef491a09.gif"
+import quilt from "../frame79/quilt_fr.png"
 
 const SuicideWatch = () =>{
 
     const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 600);
+    const navigate = useNavigate(); // Initialize the useNavigate hook
+
+    const handleImageClick = (route) => {
+      navigate(route); // Navigate to the specified route
+    };
+    
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,22 +36,9 @@ const SuicideWatch = () =>{
         <div className="Mobile-page">
         {!isWideScreen && 
         <Div>
-        <Div bgImg={angel} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="71px" w="171px"pos="absolute" top="155px" left="40%"></Div>
-        <Div bgImg={widow} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="40px" w="40px" pos="absolute" top="86px" left="166px"></Div>
-        <Div bgImg={door} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="122.48px" w="59.61px" pos="absolute" top="94.95px" left="45%"></Div>
-        <Div left="40%"top="60px" pos="absolute">Enter Lifer </Div>
-        <Div bgImg={slippers} bgSize="contain" bgRepeat="no-repeat" bgPos="center center" h="22px" w="22px" pos="absolute" top="169px" left="40%"></Div>
+          <Link to="/gkys">
         <Container
-        /*
-                d="flex"
-                flexDirection="column"
-                align="start"
-                justify="center"
-                border="0px solid"
-                borderColor="black"
-                h="50%"
-                w="33%"
-        */
+  
                 d="flex"
                 flexDirection="column"
                 align="center" // Centering content vertically
@@ -60,7 +52,37 @@ const SuicideWatch = () =>{
                   
             <div style={{ marginTop: '220px'}}>
 
-            <Welcome />
+            <Div bgImg={welcome} 
+                zIndex="1"
+                bgSize="contain" 
+                bgRepeat="no-repeat" 
+                bgPos="center center" 
+                w="230.04px" 
+                h="90.82px" 
+                pos="relative"
+                left="15%" />
+           <Div bgImg={spider} 
+            zIndex="2"
+            bgSize="contain" 
+            bgRepeat="no-repeat" 
+            bgPos="center center" 
+            w="69.98px" 
+            h="60.3px" 
+            pos="relative" 
+            top="-13px" 
+            left="70%" />
+            <Div bgImg={quilt} 
+                zIndex="0"
+                bgSize="contain" 
+                bgRepeat="no-repeat" 
+                bgPos="center center" 
+                pos="relative" 
+                h="10vh" 
+                w="100%" 
+                top="-54.88px" 
+                left="5%"/> 
+                <Div left="30%"bottom="1vh" pos="relative" onClick={() => handleImageClick("/gkys")}> Click to Enter Lifer
+                    </Div>
             <LoveHome />
             
             <div className="mobileChristmas">
@@ -68,6 +90,7 @@ const SuicideWatch = () =>{
             </div>
             </div>
         </Container>
+        </Link>
         </Div>
         }
         

@@ -9,6 +9,7 @@ import bfly from "../footerstuff/productstuff/91af2b3c1a03682a6eef7dc26c235454.g
 const Product = () =>{
 
     const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 600);
+    
 
     useEffect(() => {
       const handleResize = () => {
