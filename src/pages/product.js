@@ -91,7 +91,7 @@ const Product = () =>{
             <Col align="center center" display="flex" >
                     {product.images.map(image=>(
                                            <Div p={isWideScreen? "3rem": "0rem"} >
-                                             <Div bgImg={image.src} bgRepeat="no-repeat" bgSize="contain" bgPos="top center" h={isWideScreen? "100rem" : "50rem"} w={isWideScreen? "130%" : "100%"} p="3rem"></Div>
+                                             <Div bgImg={image.src} bgRepeat="no-repeat" bgSize="contain" bgPos="top center" h={isWideScreen? "50rem" : "40rem"} w={isWideScreen? "130%" : "100%"} p="1rem"></Div>
                                            </Div>
                                            
 
