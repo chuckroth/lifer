@@ -71,13 +71,13 @@ const Product = () =>{
             </Row>
         </Container>}
         <Container left="0" w={isWideScreen? "50%": "100%" }>
+          {  !isWideScreen && <Div>
             <Row>
                 <Text fontFamily="pointy" textSize="title" >{product.title}</Text>
             </Row>
             <Row>
                 <Text fontFamily="pointy" textColor="black" >${product.variants[0].price.amount}0</Text>
             </Row>
-            
 
             <Row>
             <Container display="flex-start" justify="left" pos="relative" >
@@ -85,6 +85,8 @@ const Product = () =>{
                     <Button onClick={()=> addItemToCheckout(product.variants[0].id, 1)} bg="geen" fontFamily="pointy" rounded="0" textColor="black" textSize="subheader">add to cart</Button>
                     </Container>
             </Row>
+            </Div>
+            }
             <Row>
             <Col align="center center" display="flex" >
                     {product.images.map(image=>(
