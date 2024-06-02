@@ -18,7 +18,8 @@ class ShopProvider extends Component{
         currentPage: 1,
         checkout: {},
         isCartOpen: false,
-        test: 'test'
+        test: 'test',
+        aboutPageDescription: ""
 
     }
 
@@ -120,6 +121,21 @@ class ShopProvider extends Component{
         }
     }
 
+    
+    fetchAboutPage = async () =>{
+        try{
+            const aboutPage = await client.collection.fetchByHandle("about-page")
+            console.log(aboutPage)
+
+            const description = aboutPage.description
+            console.log(description)
+            this.setState({aboutPageDescription: description})
+
+        }catch(error){
+            console.log("error fetching about page")
+        }
+    }
+
  
 
     closeCart = () =>{ this.setState({ isCartOpen: false })}
@@ -135,6 +151,7 @@ class ShopProvider extends Component{
                 fetchCollection: this.fetchCollection,
                 fetchTShirtCollection: this.fetchTShirtCollection,
                 fetchArchiveCollection: this.fetchArchiveCollection,
+                fetchAboutPage: this.fetchAboutPage,
                 fetchProductWithId: this.fetchProductWithId,
                 closeCart: this.closeCart,
                 openCart: this.openCart,

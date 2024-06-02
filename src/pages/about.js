@@ -1,9 +1,9 @@
 import "../App.css"
 import React from "react";
 import Welcome from "../components/gifcomponents/Welcome";
-import ChristmasTree from "../components/gifcomponents/ChristmasTree";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Container } from "atomize";
+import { ShopContext } from "../context/shopContext";
 
 
 
@@ -23,12 +23,16 @@ const About = () =>{
     };
   }, []);
     
+  const {aboutPageDescription, fetchAboutPage} = useContext(ShopContext)
+
+  useEffect(()=>{
+    fetchAboutPage();
+  }, [fetchAboutPage])
 
     return(
         <div className="About-page">
             <div className="About-intro">
-            <p>"Born in Kansas. All items handmade in Los Angeles, CA. No refunds or exchanges accepted at this time. Please see the customs product page for all info about customs:)"
-</p>
+            <p>{aboutPageDescription || 'Loading...'}</p>
             </div>
         {isWideScreen && <Welcome/>  && !isWideScreen}
         {!isWideScreen && isWideScreen && 
@@ -39,10 +43,10 @@ const About = () =>{
                 justify="center"
                 border="0px solid"
                 borderColor="black"
-                h="100%"
+                h="200%"
                 w="33%">
            
-            <ChristmasTree/> 
+
         </Container>
         }
 

@@ -75,7 +75,7 @@ const Product = () =>{
                 <Text fontFamily="pointy" textSize="title" >{product.title}</Text>
             </Row>
             <Row>
-                <Text fontFamily="pointy" textColor="black" >${product.variants[0].price.amount}</Text>
+                <Text fontFamily="pointy" textColor="black" >${product.variants[0].price.amount}0</Text>
             </Row>
             
 
