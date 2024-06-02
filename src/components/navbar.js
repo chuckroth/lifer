@@ -28,15 +28,15 @@ const Navbar = () =>{
             <Link to="/gkys" className="navtag">
             New!
             </Link>
-            <Link to="/about" className="navtag">
-            About
-            </Link>
             <Link to="/Tshirt" className="navtag">
             T Shirts
             </Link>
             <Link to="/Archive" className="navtag">
             Archive
             </Link>
+            <Link to="/about" className="navtag">
+            About
+            </Link> 
             <Anchor h= "1.5rem" onClick={()=> openCart()} className='navtag' textColor="black">Cart</Anchor>
             </Container>
         </>
