@@ -53,7 +53,7 @@ const Home = () =>{
                 border="0px solid"
                 borderColor="black"
                 pos="absolute"
-                top="26%"
+                top="28%"
                 left="50%"
                 transform="translate(-50%, -50%)"
                 h="10%"
